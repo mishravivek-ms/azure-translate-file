@@ -107,4 +107,10 @@ This class retrieves the configuration settings for Azure Cognitive Services.
 - Configure the local.settings.json file with your Azure Key Vault and Cognitive Services details.
 - Build the project using Maven:
 - mvn clean package
+- Create a blob  storage account and add the incoming and processed container.
+- Create a Key Vault and add the secrets for AzureWebJobsStorage and COGNETIVEKEY.
+- Create a User Managed Identity between keyVault and Azure Function. (https://learn.microsoft.com/en-us/azure/azure-functions/functions-identity-based-connections-tutorial#create-a-function-app-that-uses-key-vault-for-necessary-secrets)
 - Deploy the Azure Function to your Azure subscription.
+- Update the source and target language into Azure Function Environment variable.
+- Upload a file to the incoming container in the storage account.
+- Check the new translated file in the processed container.
