@@ -4,7 +4,7 @@ import com.azure.ai.translation.text.TextTranslationClient;
 import com.azure.ai.translation.text.TextTranslationClientBuilder;
 import com.azure.ai.translation.text.models.*;
 import com.azure.core.credential.AzureKeyCredential;
-import org.translate.functions.services.CognativeServiecs;
+import org.translate.functions.services.CognitiveServiecs;
 import org.translate.functions.services.KeyVaultServices;
 
 import java.util.ArrayList;
@@ -27,11 +27,11 @@ public class Translate {
     public static String translateText(String sourceString, String sourcelanguage, String targetLanguage) {
 
         // Retrieve the API key and region from the environment variables
-        String apikey = KeyVaultServices.getSecretforCognativeKey();
-        String region = CognativeServiecs.getCognativeLocation();
+        String apikey = KeyVaultServices.getSecretforCognitiveKey();
+        String region = CognitiveServiecs.getCognitiveLocation();
 
         // Check if any required environment variables are missing
-        if (apikey == null || region == null || CognativeServiecs.getCognativeURL() == null || sourcelanguage == null || targetLanguage == null) {
+        if (apikey == null || region == null || CognitiveServiecs.getCognitiveURL() == null || sourcelanguage == null || targetLanguage == null) {
             System.out.println("Please set the environment variables cognetivesearchkey and cognetivesearchlocation and sourceLanguage and targetLanguage");
             throw new RuntimeException("Please set the environment variables cognetivesearchkey and cognetivesearchlocation and sourceLanguage and targetLanguage");
         }
@@ -43,7 +43,7 @@ public class Translate {
         TextTranslationClient client = new TextTranslationClientBuilder()
                 .credential(credential)
                 .region(region)
-                .endpoint(CognativeServiecs.getCognativeURL())
+                .endpoint(CognitiveServiecs.getCognitiveURL())
                 .buildClient();
 
         // Prepare the list of target languages and the content to be translated

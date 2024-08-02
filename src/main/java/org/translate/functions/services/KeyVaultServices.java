@@ -19,7 +19,7 @@ public class KeyVaultServices {
      *
      * @return The secret key for Cognitive Services.
      */
-    public static String getSecretforCognativeKey() {
+    public static String getSecretforCognitiveKey() {
         return System.getenv("KEYVAULTCONGNETIVEKEY");
     }
 
