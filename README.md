@@ -66,7 +66,7 @@ This dependency is required to create and run Azure Functions using Java.
 - `src/main/java/org/translate/functions/utility/BlobFunctionUtil.java`: Utility class for handling blob operations and invoking the translation function.
 - `src/main/java/org/translate/functions/utility/Translate.java`: Utility class for performing text translation using Azure Cognitive Services.
 - `src/main/java/org/translate/functions/services/KeyVaultServices.java`: Service class for retrieving secrets from Azure Key Vault.
-- `src/main/java/org/translate/functions/services/CognativeServiecs.java`: Service class for retrieving Cognitive Services configuration.
+- `src/main/java/org/translate/functions/services/CognitiveServiecs.java`: Service class for retrieving Cognitive Services configuration.
 
 ## Configuration
 
@@ -99,7 +99,7 @@ This class contains the logic for translating the text content using Azure Cogni
 ### KeyVaultServices.java
 This class retrieves the secrets from Azure Key Vault using the Key Vault SDK.
 
-### CognativeServiecs.java
+### CognitiveServiecs.java
 This class retrieves the configuration settings for Azure Cognitive Services.
 
 ## Running the Sample
